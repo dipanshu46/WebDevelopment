@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists and Tables</title>
+</head>
+<body>
+
+    <!-- Lists are of two types
+    1) Ordered
+    2) Unordered -->
+    
+    Types of lists:- <br><br>
+    
+    Unordered List <br>
+    <!-- Unordered list can be created using ul tag -->
+    <ul>
+
+        <!-- List items of the list are written inside the li tag -->
+        <li>This is the first item of my unordered list</li>
+        <li>This is the second item of my unordered list</li>
+        <li>This is the third item of my unordered list</li>
+    </ul>
+    
+    Ordered List <br>
+    <!-- Ordered list can be created using ol tag -->
+    <ol>
+        
+        <!-- List items of the list are written inside the li tag -->
+        <li>This is the first item of my ordered list</li>
+        <li>This is the second item of my ordered list</li>
+        <li>This is the third item of my ordered list</li>
+    </ol>
+    
+    list type attribute... <br>
+    <!-- Lists also have a type attribute, that customizes the list marker -->
+    <ul type="square">
+        <li>This is the first item of my unordered list</li>
+        <li>This is the second item of my unordered list</li>
+        <li>This is the third item of my unordered list</li>
+    </ul>
+    
+    <ol type="i">
+        <li>This is the first item of my ordered list</li>
+        <li>This is the second item of my ordered list</li>
+        <li>This is the third item of my ordered list</li>
+    </ol>
+    <!-- You can read more about the types present on google -->
+    
+    <!-- Nested lists are also supported -->
+    Nested Lists... <br>
+    <ul>
+        <li>This is the first item of my unordered list</li>
+        <ol>
+            <li>This is the first item of my ordered list</li>
+            <li>This is the second item of my ordered list</li>
+            <li>This is the third item of my ordered list</li>
+        </ol>
+        <li>This is the second item of my unordered list</li>
+        <li>This is the third item of my unordered list</li>
+    </ul>
+
+    <br>
+
+    <!-- Tables -->
+    <h3>HTML Table</h3>
+    <table>                                 <!-- To create a table start with the table tag-->
+        <thead>                                 <!-- thead marks the table header part -->
+            <tr>                                    <!-- tr tag marks a table row -->
+                <th>Name</th>                           <!-- th tag marks table header cell-->
+                <th>Employee ID</th>
+                <th>Employee Role</th>
+            </tr>
+        </thead>
+        <tbody>                                 <!-- tbody marks the body of the table -->
+            <tr>
+                <td>Dipanshu</td>                       <!-- td tag marks the table data cell-->
+                <td>34343</td>
+                <td>Programmer</td>
+            </tr>
+            <tr>
+                <td>Harry</td>
+                <td>34384</td>
+                <td>HTML Expert</td>
+            </tr>
+            <tr>
+                <td>Shubham</td>
+                <td>7564</td>
+                <td>Android Developer</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
