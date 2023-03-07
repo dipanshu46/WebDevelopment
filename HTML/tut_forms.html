@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <!-- Forms -->
+    <!-- Document asking users some information is called a Form -->
+    <!-- Forms have an input tag that allows user to give input according to the input type mentioned in the tag -->
+
+    <!-- We have various input types, To know more about the types visit https://www.w3schools.com/html/html_form_input_types.asp -->
+    
+    Registration Form
+    <br>
+    <form action="backend.php">             <!-- action attribute sets the form action after completion-->
+        <div>
+            <!-- Text input creates an empty box for text to be given as input-->
+            <!-- label is used to mark a tag with an id to another element on the page -->
+            <!-- here, label is created for element having id as name, whenever a user will click the "Name :" it will select the textbox whose id is name  -->
+            <label for="name">Name :</label><input type="text" name="myName" id="name" placeholder="Enter your Name">        
+            <!-- placeholder is an attribute which displays the passed string in the text box if nothing has been entered yet -->
+        </div>
+        <br>
+        <div>
+            <!-- Name attribute is used for backend to identify a tag -->
+            <label for="role">Role : </label><input type="text" name="myRole" id="role" placeholder="Enter your Role">        
+        </div>
+        <br>
+        <div>
+            <!-- Email input takes an email as input-->
+            <label for="email">Email :</label><input type="email" name="myEmail" id="email" placeholder="Enter your email id">     
+        </div>
+        <br>
+        <div>
+            <!-- Date input displays a calender to give input in a date format -->
+            <label for="date">Date :</label><input type="date" name="myDate" id="date">
+        </div>
+        <br>
+        <div>
+            <!-- Number input creates a box with up down buttons to increment or decrement number value entered -->
+            <label for="bonus">Bonus :</label><input type="number" name="myBonus" id="bonus" placeholder="Enter expected bonus">
+        </div>
+        <br>
+        <div>
+            <!-- Checkboxes provide you multiple select options -->
+            <label for="eligibility">Are you eligible : </label><input type="checkbox" name="myEligibility" id="eligibility" checked>
+            <!-- checked attribute keeps the checkbox checked initially -->
+        </div>
+        <br>
+        <div>
+            <!-- Radio buttons provide you single select functionality -->
+            <!-- NOTE : name of radio button tag should be same to mark that they are for the same question -->
+            <label for="male">Gender :</label><input type="radio" name="myGender" id="male"><label for="male"> Male </label><input type="radio" name="myGender" id="female"><label for="female"> Female </label><input type="radio" name="myGender" id="other"><label for="other"> Other </label>
+        </div>
+        <br>
+        <div>
+            <!-- Text area gives you the power to take paragraph inputs from the user in a neat way -->
+            <label for="myself">Write about yourself :</label><br><textarea name="myText" id="myself" placeholder="Enter about yourself" cols="60" rows="10" ></textarea>
+        </div>
+        <br>
+        <div>
+            <!-- select is used for dropdown list select feature -->
+            <label for="car">Car : </label>
+            <select name="myCar" id="car">
+                <!-- options are the dropdown list items, value indicates value of the tag, value will be passed to backend when an option is selected. selected keyword marks the default selected option -->
+                <option value="Indica" selected>Indica</option> 
+                <option value="Swift">Swift</option>
+                <option value="City">City</option>
+                <option value="Polo">Polo</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <!-- Input type submit creates a button that submits the form by calling the action attribute of form so that the backend can take care of the values provided -->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+        
+    </form>
+</body>
+</html>
