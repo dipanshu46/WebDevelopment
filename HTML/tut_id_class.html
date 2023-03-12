@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ids and Classes</title>
+</head>
+<body>
+    <h3>Ids and Classes tutorials</h3>
+    
+    <!-- Ids are unique identities of an element. No element can have a same id as of other they are totally unique. -->
+    
+    <!-- Classes are common identities that inherit some properties. Mulitple classes can be in an element and multiple elements can have common classes -->
+    
+    <div id="mainBox" class="redBg blackBorder">   
+        <!-- redBg and blackBorder are different classes, but id main box is unique and should not be given to any other element -->
+        This is main box
+    </div>
+
+    <!-- Emmet -->
+    <!-- by using emmets we can bring classes or ids with an element -->
+    
+    <!-- . is for classes and # is for ids -->
+    <span class="redBg"></span>     <!-- Use span.redBg to generate this element -->
+    <span id="mainSpan"></span>     <!-- Use span#mainSpan to generate this element -->
+    <div class="redBg blackBorder anotherclass"></div>  <!-- div.redBg.blackBorder.anotherclass to generate this element -->
+    
+    <!-- emmet takes div tag as default -->
+    <div class="blackBg"></div>     <!-- Use .blackBg to generate this element-->
+
+    <!-- Creating multiple elements using Emmet -->
+    <!-- Write your element emmet use '*n', it multiplies the emmet line n times -->
+    <span class="myclass1 myclass2 myclass3">first</span>
+    <span class="myclass1 myclass2 myclass3">second</span>
+    <span class="myclass1 myclass2 myclass3">third</span>
+    <span class="myclass1 myclass2 myclass3">fourth</span>
+    <!-- Use span.myclass1.myclass2.myclass3*4  to generate this -->
+
+</body>
+</html>
