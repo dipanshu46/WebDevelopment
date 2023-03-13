@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* style tag allows us to write css code inside it. NOTE:- this comment is also a css comment as we are inside the style tag. */
+        p{
+            /* color: aqua !important; */
+            color: aqua;
+            background-color: salmon;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <!-- This tag links the external css file to this markup -->
+    <link rel="stylesheet" href="css_tut.css"> 
+
+</head>
+<body>
+    <!-- Methods to add CSS to your markup -->
+    
+    <!-- 1) Inline CSS, it is written directly in the element we want to give style to-->
+    <p style="color:red; background-color: yellow;">This is an example of inline CSS</p>      
+    <!-- This will make the text of line red in color and the background yellow in colour.-->
+
+    <!-- 2) Internal CSS, it is written in the head element inside the style tag. Look for style tag inside head tag. -->
+    <p>This is an example of Internal CSS. This line's text will be aqua in colour and the background will be salmon in colour. </p>    <!-- Look for the NOTE below if result is as mentioned.-->
+
+    <!-- 3) External CSS, a style sheet is added in the head tag using link tag. Look for link tag inside head tag. -->
+    <p>This is an example of External CSS.</p>
+
+    <!-- NOTE : Precedence plays an important role in css. Inline css has the highest precedence. For internal and external css, if both are present in the markup, and since both are written inside the head tag, the one written later updates the css written by the earlier one. So if you want internal css to display its effect, you need to write the style tag after the link tag, and vice versa for the external to display its style effect.-->
+    <!-- Here, I have written link tag after the style tag in the head tag, so External CSS will be displayed. -->
+
+    <!-- If you want to make a style of the highest precedence no matter where it is written, write !important in the style just before closing it with a semi-colon (;). Look for the commented color attribute in the internal css. Uncomment it to see its result -->
+</body>
+</html>
