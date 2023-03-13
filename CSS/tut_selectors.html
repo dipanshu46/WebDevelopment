@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Element selector :- 
+        this is an element selector since we are using an element name to define its css. */
+        p {
+            border: 2px solid green;
+            color: red;
+        }
+
+        /* ID selector :-
+        this is an ID selector since we are using an id to define its css */
+        #secondPara {
+            background-color: skyblue;
+        }
+        
+        /* Class selector :- 
+        this is a class selector since we are using a class to define its css */
+        .blueElement {
+            color: blue;
+        }
+
+        /* Grouping selector :- 
+        this is an example of grouping selector since we are using a comma seperate two or more selectors to define their css */
+        span, footer {
+            background-color: pink;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <h3>CSS Selectors</h3>
+    <p>This is a simple paragraph to demonstrate css selectors.</p>
+    <p id="secondPara">This is another simple paragraph to demonstrate css selectors</p>
+    <div>
+        <p class="blueElement">This is yet another simple paragraph to demonstrate css selectors</p>
+        <span>This is a span</span>
+    </div>
+    <footer>This is a footer</footer>
+</body>
+</html>
