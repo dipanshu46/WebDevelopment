@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+    
+    <!-- Internal Styling -->
+    <style>
+        .userFonts{
+            font-family:'Courier New', Courier, monospace;
+            font-size: 23px;   /* 1 px = 1/96 inch */ 
+        }
+
+        .anotherFonts{
+            font-family:'Caveat',cursive;
+            font-size: 23px;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        
+        .italic{
+            font-style: italic;
+        }
+    </style>
+
+    <!-- External link for fonts -->
+    <!-- To use webfonts linkng these stylesheets is mandatory -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h3>CSS Fonts :- </h3>
+    <p>There are generally two types of fonts. <br>
+        1) Web safe fonts, they are the fonts already available on your operating system. <br>
+        2) Web fonts, they have to imported for using. <br><br>
+    These fonts can be used through css by defining font-family attribute.
+    </p>
+    <p class="userFonts">This is a sample text for fonts.</p>
+    <p class="anotherFonts">This is another text with web fonts.</p>
+    <p class="userFonts">This is an example of <span class="bold">font-weight</span> and <span class="italic">font-style</span></p>
+
+    <p>There is a concept of font-stacking as we have used in our styling. We provide the font-family attribute with a list of fonts we prefer. In that case if first one is not available in the user's browser it searches for the next font and continues this way.</p>
+
+    <p>For using web fonts, the ones that are not available in your system by default, search for google fonts or any other font library, here i am using google fonts. To use google fonts watch this <a href="https://youtu.be/jNsCyPvVeEk" target="_blank">video</a></p>
+</body>
+</html>
