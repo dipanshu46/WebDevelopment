@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border and Background</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        #firstPara {
+            background-color: red;        /* This makes the background color to the mentioned color (here red) */
+            height: 100px;                  /* This sets the cell height to the mentioned value (here 100px) */      
+            width: 530px;                   /* This sets the cell width to the mentioned value (here 530 px) */
+
+            /* Now adding border to it */
+            border-width: 4px;              /* This makes a border of the mentioned value (here 4px) around the cell */
+            border-style: solid;            /* This defines the style of border you want (here solid) try out other border styles to know about them */ 
+            border-color: darkgreen;      /* This sets the border color to the mentioned border color
+
+            /* we can set border with all these three attributes in a single line */
+            border: 4px solid darkgreen;
+
+            border-radius: 11px;            /* Curves the corners of the cell with the mentioned radius*/
+        }
+
+        #secondPara {
+
+            /* other border attributes */
+            background-color: rgb(58, 243, 98);
+            height: 100px;
+            width: 455px;
+            border-top: 2px solid rgb(231, 22, 231);
+            border-right: 2px solid rgb(18, 10, 133);
+            border-bottom: 2px solid rgb(9, 144, 27);
+            border-left: 2px solid  rgb(156, 42, 13);
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 14px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 24px;
+        }
+
+        #thirdPara{
+            height: 400px;
+            width: 455px;
+            border: 2px solid red;
+            
+            /* To insert an image in the background use this attribute */
+            background-image: url("https://yt3.ggpht.com/yti/AHXOFjX9YntBE-RIHHyD1bIW8W74NQOeDuDBqbRGew=s88-c-k-c0x00ffffff-no-rj-mo");     
+            /* The url() in value is used to enter an image coming from a url, to directly use image from your folder directly add the absolute or relative location of the image. */
+            
+            background-repeat: no-repeat;    /* repeats the image in the background according to the mentioned value. Try out other values like repeat-x (will repeat the image in x axis) repeat-y (will repeat the image in y axis) */
+
+            /* You can set the position of the image too inside the cell */
+            background-position: center center;     /* will place the image at the exact center */
+            /* If you use px or units to mark the position, it will take values as x and then y respectively. But for general uses we use top left, top center, top right, center left, center right, center center, bottom left, bottom center, bottom right */
+        }
+    </style>
+</head>
+<body>
+    <h3>This is heading</h3>
+    <p id="firstPara">This is a paragraph</p>
+    
+    <h3>This is second heading</h3>
+    <p id="secondPara">This is second paragraph</p>
+    
+    <h3>This is third heading</h3>
+    <p id="thirdPara">This is third paragraph</p>
+</body>
+</html>
