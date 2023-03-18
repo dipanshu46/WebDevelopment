@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+
+        /* To set properties for all */
+        /* * {
+            
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        } */
+
+        body {
+            background-color: #e6cbf8;
+        }
+        
+        .container{
+            background-color: rgb(231,230,241);
+            border: 3px solid rgb(64, 6, 119);
+            
+            /* We can set margin/padding for top, bottom, left and right like this */
+            /* margin-top: 3px;
+            margin-bottom: 5px;
+            margin-left: 34px;
+            margin-right: 5px; */
+
+            /* padding-top : 79px 
+            padding-bottom: 79px;
+            padding-left: 79px;
+            padding-right: 79px; */
+
+            /* padding : top right bottom left */
+            /* margin : top right bottom left */
+            /* padding : 23px 56px 6px 78px;    */
+            /* margin : 23px 56px 6px 78px;    */
+            
+            /* padding: y(top/bottom) x(left/right); */
+            /* margin: y(top/bottom) x(left/right); */
+            padding: 34px 19px;     
+            margin: 14px 19px;
+            border-radius: 23px;
+            width: 533px;
+        }
+    </style>
+</head>
+<body>
+    <!-- What is Box Model? -->
+    <h3>Box Model</h3>
+    <p>Box model is the representation of the element with its complete surrounding on a webpage. <br>
+        It consists of : <ul>
+            <li>Element</li>
+            <li>Padding</li>
+            <li>Border</li>
+            <li>Margin</li>
+        </ul>
+    </p>
+    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/CSS-Box-Model.png" width='600px' alt="Google Search Box model in CSS">
+
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maxime ducimus sunt! Qui, libero maiores quibusdam numquam at doloremque suscipit quis vel consequatur.</p>
+    </div>
+
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maxime ducimus sunt! Qui, libero maiores quibusdam numquam at doloremque suscipit quis vel consequatur.</p>
+    </div>
+
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maxime ducimus sunt! Qui, libero maiores quibusdam numquam at doloremque suscipit quis vel consequatur.</p>
+    </div>
+</body>
+</html>
