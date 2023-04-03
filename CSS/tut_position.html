@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+
+    <!-- Internal Styling -->
+    <style>
+        .container {
+            border: 2px solid black;
+            background-color: khaki;
+            margin: 10px 4px;
+        }
+
+        .box {
+            border: 2px solid red;
+            width: 150px ;
+            height: 150px;
+            margin: 2px;
+            display: inline-block;
+        }
+
+        /* Position */
+        /* It defines where an element should be on the webpage. */
+        /* Position are of 5 types: static (default), relative, absolute, fixed, sticky */
+        /* We can also place an element using the parameters like top, bottom, left, right. */
+        /* top - sets the position mentioned distance from top */
+        /* bottom - sets the position mentioned distance from bottom */
+        /* left - sets the position mentioned distance from left */
+        /* right - sets the position mentioned distance from tright*/
+        #cont1 #box3 {
+            /* static is the defualt position value.  */
+            position: static;
+            /* Parameters like top, bottom, left, right won't work when in static position */
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+        }
+        #cont2 #box3 {
+            /* relative positional value sets the position of the element from the static position the element  */
+            position: relative;
+            /* here we have set all the values to 30px */
+            /* Note: moving 30px from top and from bottom will result in the box being at the original place as they are opposited directions, so in this case, the parameter that was defined first will be considered. So box will move 30px from top and 30px from left due to the same reason. */
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+        }
+        #cont3 #box3 {
+            /* absolute positional value initially places the block at the static positions. Then if any of the parameters like top, bottom, left, right is set, it positions the element the respective from the respective direction from the page border.   */
+            /* Note: since top and bottom are opposite directions, the one that was defined first will be considered. Here we have set top and left to 10px and 50px respectively so the element will be placed 10px and 50px from the top and left side of the page.  */
+            position: absolute;
+            top: 10px;
+            left: 50px;
+        }
+        #cont4 #box3 {
+            /* fixed position value only shows block after its top, bottom, left, right is/are mentioned. It sets its position to the mentioned distance from the respective direction from the screen. */
+            position: fixed;
+            /* Note: since top and bottom are opposite directions, the one that was defined first will be considered. Here we have set bottom and right to 30px, so the element will be placed 30px from the bottom and right side of the page.  */
+            bottom: 30px;
+            right: 30px;
+        }
+
+        #cont5 {
+            height: 2000px;
+            width: 2500px;;
+        }
+
+        #cont5 #box3 {
+            /* sticky position value sticks to page at the defined position from the parent blocks border ( screen when directly written in the body, here it is the container box for sticky.) when scrolled. Initially remains at the static position.  */
+            position: sticky;
+            /* To demonstrate sticky, since it is inside the container with id cont5, we need to expand the size of the container so that it is scrollable in y as well as x direction. */
+            top:30px;
+            bottom: 30px;
+            left:30px;
+            right: 30px;    /* From you won't be able to see because the element does not move enough left to display so, but it works similarly as the other three sides are working. */
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Look in Internal Styling to know about position attribute. -->
+    <div class="container" id="cont1">
+        <p>Box For static</p>    
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3-static</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    <div class="container" id="cont2">    
+        <p>Box For relative</p>    
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3-relative</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    <div class="container" id="cont3">    
+        <p>Box For absolute</p>    
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3-absolute</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    <div class="container" id="cont4">    
+        <p>Box For fixed</p>    
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3-fixed</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    <div class="container" id="cont5">    
+        <p>Box For sticky</p>    
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3-sticky</div>
+        <div class="box" id="box4">4</div>
+    </div>
+
+    <br>
+
+    <div class="container" id="para">
+        <p>This is a paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ipsam unde numquam perferendis libero provident harum nesciunt aliquam sit ad dolor magnam eum magni eaque voluptatibus blanditiis cum illo tenetur porro ratione, placeat cupiditate at? Ullam nesciunt dolorem illum similique, accusamus aspernatur quaerat autem eos. Rem, voluptates. Quibusdam quod dolorem repellat nostrum tempore ipsa itaque dignissimos. Nesciunt praesentium minus quo facilis dolore repellat ab officia vero fugiat accusamus qui quia, ex earum molestiae ipsum veritatis, inventore excepturi debitis aliquam neque dolores. Cupiditate dicta architecto corporis, at obcaecati id placeat non maiores totam, autem quaerat maxime quas accusantium vitae? Sit voluptatibus dolor ipsum quos accusantium labore odit delectus quia id, saepe, earum beatae doloribus. Labore animi eligendi voluptate quam ipsa eius libero voluptates architecto repudiandae corrupti soluta sapiente aspernatur ducimus quo facilis alias blanditiis voluptas quos id iste, nam itaque amet. Illo, autem! Vitae ex similique a quo in veniam consequuntur, vel est sunt ratione incidunt temporibus quaerat accusantium voluptatibus. Quas corporis eligendi doloribus cupiditate ducimus quisquam assumenda ex obcaecati omnis culpa vel accusantium nobis, iusto numquam totam ratione vero quod iure pariatur porro ipsum sunt nulla asperiores? Nam officiis architecto totam deserunt enim. Quibusdam temporibus adipisci recusandae iusto unde accusantium!</p>
+    </div>
+
+    <br>
+    <h3>This is a heading</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus error autem blanditiis adipisci necessitatibus voluptatem aut vel architecto ducimus! Ipsam excepturi, ea perspiciatis unde reiciendis placeat aliquam esse fugit ducimus! Pariatur odio saepe earum sed, delectus facilis cumque, unde consequatur praesentium nobis illum aperiam, rerum dolorem. Quaerat minima suscipit delectus necessitatibus. Maiores, numquam? Ab ipsam eligendi ipsa repellat vel nobis, iste alias et sit ad quasi, excepturi itaque aspernatur? Accusantium ex animi magnam, quas sint ducimus architecto quidem beatae atque porro minus in natus, unde illo rerum eius. Dignissimos consequuntur tempore eos nostrum fugit nulla libero vero aspernatur incidunt possimus ipsa quam ut repellat pariatur explicabo sequi iure temporibus, aliquam dolores. Quos fuga explicabo hic ut eos dolor adipisci, nam reprehenderit quisquam deserunt? Repellendus quod veritatis a porro cumque illum temporibus aperiam expedita iste, incidunt provident, quis atque sapiente, eum dicta vel totam. Ipsum necessitatibus architecto sunt. Consectetur ea distinctio eaque debitis eligendi, rem excepturi expedita animi eius similique, aliquid possimus. Itaque quibusdam temporibus maiores possimus dolorum! Voluptatibus odio nemo quaerat ipsum reprehenderit, assumenda magnam natus possimus itaque veritatis quisquam aliquam eius minima vitae harum aliquid totam inventore eos omnis. Iusto excepturi, adipisci aperiam reiciendis illo debitis! Amet dicta dolorum ipsam vel laudantium cupiditate sit, perferendis at! Fugit nostrum at dignissimos rem dolores, consectetur esse asperiores. Repudiandae ex repellat optio? Ipsam doloremque sunt nihil, illo hic provident qui ipsum quaerat similique soluta atque inventore veniam aliquid eveniet quo est placeat eos doloribus odio reiciendis vel, cum error adipisci ab. Iure velit laboriosam asperiores ab reiciendis? Consequatur tenetur voluptatem perferendis natus id animi libero eligendi similique consequuntur? Exercitationem praesentium ipsa sunt dignissimos quas reiciendis explicabo ullam minus soluta distinctio ut, officiis omnis veniam dolorem assumenda voluptate quibusdam doloremque obcaecati illo corporis aliquam ab, reprehenderit accusamus? Voluptates delectus laudantium, ex dolore ipsum ratione, tempore facere, deserunt officiis magni quo ut! Beatae facilis deleniti, voluptates perferendis enim doloremque esse eaque adipisci dolores nulla delectus perspiciatis omnis ab. Delectus repellendus, itaque quo rem excepturi saepe enim quis sunt quidem, maiores nemo. Ducimus consectetur obcaecati repellendus quisquam error ea recusandae perferendis vitae dolore atque, quos quibusdam ad quod cupiditate nemo dicta maxime nisi alias earum aspernatur quasi sed. Dolor ex possimus saepe hic aspernatur cumque dignissimos, quasi, laboriosam qui consequatur tempore incidunt totam repellat facilis molestias eaque recusandae fugiat delectus dolorem quisquam nostrum harum iste. Hic repellat et harum ullam sint accusantium labore, eius velit natus nihil beatae! Veritatis vitae veniam totam autem ipsum harum! Deserunt veritatis corporis aspernatur, amet maiores necessitatibus enim. Quo reiciendis necessitatibus voluptate debitis dolorem voluptates voluptatum illo dolorum officia, minus nam porro aut nesciunt, saepe id est reprehenderit culpa a fuga at. Consequuntur sit corporis ut aliquid tenetur. Ratione rerum veritatis explicabo vero! Animi quos incidunt saepe? Culpa cum autem est suscipit reiciendis numquam voluptates nobis consequuntur iusto accusantium officiis incidunt alias necessitatibus aliquid voluptas deleniti debitis fuga placeat animi, sequi aut nisi eius aspernatur a? Nisi reiciendis maiores facere. Provident delectus optio rerum ratione odit aperiam corrupti ipsa nostrum!</p>
+</body>
+</html>
