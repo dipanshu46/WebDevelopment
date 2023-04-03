@@ -6,10 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Page</title>
     
-    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background: url('img/bg.jpg');
+            color: white;
+        }
+        .left {
+            border: 2px solid red;
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            left: 38px;
+        }
+        .mid {
+            border: 2px solid green;
+            display: block;
+            width: 50%;
+            margin: 20px auto;
+        }
+        .right {
+            border: 2px solid yellow;
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            right: 34px;
+        }
+
+        .navbar {
+            display: inline-block;
+            width: 100%;
+            margin: auto;
+        }
+        .navbar li {
+            display: inline-block;
+            font-size: 25px;
+            width: 24%;
+            margin: auto;
+        }
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 34px 23px;
+        }
+        .navbar li a:hover, .navbar li a.active{
+            color: grey;
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
-    
+    <header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+            I am Left
+        </div>
+        
+        <!-- Mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- Right box for buttons -->
+        <div class="right">
+            I am right
+        </div>
+    </header>
 </body>
 </html>
