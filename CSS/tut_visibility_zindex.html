@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and z-index</title>
+    <!-- Internal Styling -->
+    <style>
+        .box {
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+
+        #box1 {
+            /* visibility visible is the default setting. It just displays the element. */
+            visibility: visible;
+            background-color: red;
+        }
+        #box2 {
+            /* visibility hidden hides the element from display. */
+            visibility: hidden;
+            /* Note: it still shows the empty space acquired by the element. */
+            background-color: green;
+        }
+        #box3 {
+            /* Setting this elements position in such a way that it overlaps the box below it */
+            position: relative;
+            top: 14px;
+            /* setting the z-index value. */
+            z-index: 34;
+            background-color: yellow;
+        }
+        #box4 {
+            /* setting the element for z-index to work */
+            position: relative;
+            top: 0px;
+            /* setting z-index value */
+            z-index: 50;
+            background-color: rgb(0, 162, 255);
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Visibility - as the name suggests sets the visibility of the box -->
+    <!-- Visibility has three types or values.
+        1) Visible (default)
+        2) Hidden
+        3) Collapse -->
+    <!-- Look in the internal styling to know more about visibility -->
+
+    <!-- Z-index - allows us to set an element as display on top or at bottom depending upon its value of which element is set higher. -->
+    <!-- Z-index only works when the position of the element is set and is different from static -->
+    <!-- Here box3 will be overlaping box4 as its z-index value is greater. Greater number can be easily identified using number line concept. Eg: -1 is greater than -10 and 10 is greater than 1. -->
+    
+    <!-- used div.box#box$*4 to create these -->
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>
