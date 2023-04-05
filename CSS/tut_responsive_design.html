@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive desing using size units</title>
+
+    <!-- Internal styling -->
+    <style>
+        html {
+            font-size: 25px;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            /* to set the height of the element as the viewport height we use the unit vh. Its value is given in percentage. Similarly theres a unit vw which stands for viewport width. */
+            height: 100vh;
+            width: 100vw;
+            font-size: 10px;
+            border: 2px solid red;
+        }
+
+        #first {
+            /* em sizing unit - it multiplies to the parent font size */
+            font-size: 3em;         /* here parent font-size is 10px so 3em will evaluate to 30px */
+            padding: 3em;           /* here padding or margin will take multiple of font-size as their parent size */
+        }
+
+        #second {
+            /* rem sizing unit - it multiplies to the html font-size always */
+            font-size: 2rem;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- What is Responsive Design? -->
+    <!-- Responsive design is a way for a web developer to make his website adapt to all the devices and resolutions. -->
+    <!-- Various ways to achieve Responsive designs :-
+        1) Setting up the viewport
+        2) Use max-width/ max-height
+        3) Using CSS Media-queries
+        4) Using rem/vh/vw over pixels -->
+    
+    <div class="container">
+        Container for rem and em.
+         <h1 id="first">This is first heading</h1>
+         <h1 id="second">This is second heading</h1>
+         <h1 id="third">This is third heading</h1>
+    </div>
+
+    <div class="container">
+        Container for vh and vw.
+         <h1 id="f">This is first heading</h1>
+         <h1 id="s">This is second heading</h1>
+         <h1 id="t">This is third heading</h1>
+    </div>
+
+</body>
+</html>
