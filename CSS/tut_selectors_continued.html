@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+
+    <!-- Internal Styling -->
+    <style>
+        h1 {
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Marks a p which is inside an li which inside a div */
+        /* div li p {
+            color: yellow;
+            background-color: green;
+            font-weight: bold;
+        } */
+
+        /* Marks p which is direct child of div */
+        /* div > p {
+            color: yellow;
+            background-color: green;
+            font-weight: bold;
+        } */
+
+        /* Marks p that is next sibling of div */
+        div + p {
+            color: white;
+            background-color: rgb(236, 118, 118) ;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors.</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>This is another paragraph inside li</p></li>
+                <li class="item"></li>
+                <li class="item"></li>
+                <li class="item"></li>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outer paragraph</p>
+</body>
+</html>
