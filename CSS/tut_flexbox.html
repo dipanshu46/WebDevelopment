@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox</title>
+    <style>
+        .container {
+            height: 544px;
+            width: 100%;
+            border: 2px solid black;
+            /* To make this container element a flex container, we need to set display attribute to flex */
+            display: flex;
+            /* Flex properties for flex containers. Note: These properties are for flex container and can be overwritten */
+            
+            /* To arrange the items in a particular direction we use flex-direction */
+            flex-direction: row;        /* default value */
+            /* flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse; */
+
+            /* To wrap the flex items to make it reponsive we use flex-wrap */
+            flex-wrap: nowrap;          /* default value */
+            flex-wrap: wrap;            /* this wraps the items below the start line */
+            /* flex-wrap: wrap-reverse; */    /* this wraps the items above the start line */
+            
+            /* To set the above two properties together we use flex-flow: <flex-direction> <flex-wrap> */
+            flex-flow: row wrap;
+
+            /* To set the items with center alignment or some spacings we use justify-content */
+            justify-content: center;        /* will center align all the items together */
+            justify-content: space-between; /* will set same space between every two items */
+            justify-content: space-evenly;  /* will set same space like space between includin the starting point and the ending point. */
+            justify-content: space-around;  /* will set same space around each item */
+
+            /* To align the items we use align-items  */
+            align-items: flex-start;        /* align items to the vertical start of the flex */
+            align-items: flex-end;          /* align items to the vertical end of the flex */
+            align-items: center;            /* align items to the vertical centre */
+            align-items: stretch;           /* creates equal space at between vertical rows */
+        }
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 3px;
+        }
+
+        #item1 {
+            /* Flex properties for a flex item */
+            /* Order property sets the position of the element according to the order comparison */
+            /* If an element has highest order it will be placed at the last and if it has the lowest order it will be placed first*/
+            /* order: 2; */
+
+            /* flex-grow is used to grow a box in comparison to other boxes or elements */
+            /* Note: you can not give negative numbers in this attribute. */
+            /* flex-grow: 2; */
+            /* Similarly we have flex-shrink. It is used to shrink a box in comparison to other boxes or elements */
+            /* flex-shrink: 2; */
+
+            /* flex-basis is used to control size of the element */
+            /* Note: If the flex-direction is row, flex-basis will control the width of the element and if the flex-direction is column it will control the height of the element. */
+            flex-basis: 160px;
+        }
+        #item2 {
+            order: 4;
+            /* flex-grow: 3; */
+            /* flex-shrink: 3; */
+        }
+        #item3 {
+            /* We can use a shorthand for the flex properties */
+            /* flex: <flex-grow> <flex-shrink> <flex-basis> ; */
+            flex: 2 2 230px;
+        }
+        #item4 {
+            /* Most important flex property that you might be using is align-self */
+            /* Note: It is similar to align-items, but align-items was used inside the container to align the items and align-self is used inside an item to align itself */
+            align-self: flex-end;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- What is Flex Box? -->
+    <!-- Flexbox is a one-dimensional layout method for laying out items in a rows or columns. It is a better way to align items into a container. Flexbox = flexible + box -->
+    <!-- to create a container as a flexbox, we just need to write display property as flex. It basically has two containers, a flex container and a flex items. Each container can have multiple flex items. -->
+
+    <div class="container">
+        <div class="item" id="item1">First Box</div>
+        <div class="item" id="item2">Second Box</div>
+        <div class="item" id="item3">Third Box</div>
+        <div class="item" id="item4">Fourth Box</div>
+        <div class="item" id="item5">Fifth Box</div>
+        <div class="item" id="item6">Sixth Box</div>
+    </div>
+</body>
+</html>
