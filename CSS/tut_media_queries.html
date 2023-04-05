@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <!-- Internal Styling -->
+    <style>
+        .box {
+            font-size: 72px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            display: none;
+        }
+
+        /* To use media queries we write @media (query){ (CSS) } */
+
+        @media only screen and (max-width:300px){
+            #box1 {
+                display: block;
+                background-color: cyan;
+            }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:600px){
+            #box2 {
+                display: block;
+                background-color: blueviolet;
+            }
+        }
+
+        @media only screen and (min-width:600px) and (max-width:900px){
+            #box3 {
+                display: block;
+                background-color: yellow;
+                color: black;
+            }
+        }
+
+        @media only screen and (min-width:900px){
+            #box4 {
+                display: block;
+                background-color: green;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- What are media queries? -->
+    <!-- Media queries is a method to create responsive designs. They are just like if conditions using which we inject some css to make page look more responsive at certain conditions like size of the screen. -->
+
+    <div class="box" id="box1">Main ek iphone hoon</div>
+    <div class="box" id="box2">Main ek tablet hoon</div>
+    <div class="box" id="box3">Main ek desktop computer hoon</div>
+    <div class="box" id="box4">Main ek wide screen hoon</div>
+</body>
+</html>
