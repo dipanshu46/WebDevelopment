@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes and Animations</title>
+</head>
+<!-- Internal Styling -->
+<style>
+    .container {
+        background-color: yellowgreen;
+        display: flex;
+        flex-direction: column;
+    }
+    .box {
+        background-color: green;
+        width: 250px;
+        height: 250px;
+        position: relative;
+    }
+
+    #box1{
+        /* Animtion's basic details */
+        /* Our animations name */
+        animation-name: animate1;
+        /* Its duration - for how much time do we want our animation to work */
+        animation-duration: 2s;
+        /* Its iteration count - how many times our animation should work */
+        animation-iteration-count: infinite;       /* can also be set to infinite */
+        /* To make animation to stay at the to state use animation-fill-mode: forwards; */
+        animation-fill-mode: alternate;
+        /* To alter the pace of the time  */
+        animation-timing-function: ease-in-out;
+        /* To start the animation after a certain timeout */
+        animation-delay: 0s;
+        /* Sets the animation flow direction */
+        animation-direction: alternate;
+    }
+
+    #box2{
+        /* Creating another animation */
+        animation-name: animate2;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+        /* Shorthand to animation */
+        /* Syntax: animation: animation-name, animation-duration, animation-timing_function, animatino_delay, animation-iteration-count, animation-fillmode; */
+        animation: animate2 2s ease-in 0s 12 backwards;
+    }
+
+    /* Creating Animation 1*/
+    @keyframes animate1 {
+        /* After creating key frames we need to give two attributes from and to */
+        from{
+            width:200px;
+        }
+        to{
+            width: 1000px;
+        }
+    }
+
+    /* Creating Animation 2 */
+    @keyframes animate2 {
+        0%{
+            top: 0px;
+            left: 0px;
+        }
+        25%{
+            top: 250px;
+            left: 0px;
+        }
+        50%{
+            top: 250px;
+            left: 250px;
+        }
+        75%{
+            top: 0px;
+            left: 250px;
+        }
+        100%{
+            top: 0px;
+            left: 0px;
+        }
+    }
+
+
+</style>
+<body>
+    <!-- Animations are basically some movements on the screen that are set to be moved in a specific way.
+    We can make some animations using keyframes in CSS. -->
+    <!-- Look in the Internal Styling to know more about it. -->
+
+    <div class="container">
+        <div id="box1" class="box">This is box 1</div>
+        <div id="box2" class="box">This is box 2</div>
+    </div>
+</body>
+</html>
