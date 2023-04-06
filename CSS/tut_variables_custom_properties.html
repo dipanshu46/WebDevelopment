@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/Custom Properties</title>
+
+    <!-- Internal Styling -->
+    <style>
+        :root{
+            /* These variables are accessed globally */
+            --primary-color : blue;
+            --danger-color : red;
+            --maxw : 733px;
+        }
+
+        .box {
+            /* Creating a variable in CSS */
+            /* Syntax: --var_name = value */
+            /* --box-color : blue; */
+            width: 200px;
+            height: 200px;
+            /* For using these variables use: var(--var_name) */
+            background-color: var(--primary-color);
+            border: 2px solid var(--danger-color);
+            box-shadow: 3px 3px 4px var(--primary-color);
+            margin: 2px 9px;
+            /* NOTE: Variables defined in this block will have scope limited to this block only and thus wouldn't be available in other blocks. */
+            /* To make a variable global define them in the :root{} block */
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* using variables that aren't defined will not throw any error instead css will assume a value to the variable which might be undesirable. */
+            background-color: var(--box-color);
+            background-color: var(--danger-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS Variables/Cutom properties -->
+    <!-- Look in Internal Styling to know more about them -->
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
