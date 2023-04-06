@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+
+    <!-- Internal Styling -->
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .card {
+            padding: 23px 12px;
+            margin: 23px 12px;
+            /* border: 2px solid red; */
+            background-color: burlywood;
+            /* Box Shadows */
+            /* Syntax: box-shadow: x-offset y-offset blur-radius spread-radius color; */
+            /* offsets can have negative values to move in the negative directions. */
+            /* Following are examples to use box-shadow with in ways */
+            box-shadow: 10px 13px green;
+            box-shadow: 7px 5px 10px green;
+            box-shadow: 7px 5px 10px 34px green;
+            box-shadow: 7px 5px 10px 3px rgba(91, 255, 255, 0.596);
+            box-shadow: inset 7px 5px 10px green;
+            box-shadow: 10px 0px green, 0px 10px red, 10px 10px rgb(91, 255, 255);
+        }
+
+        .card h2 {
+            /* Text Shadows */
+            /* Similar to box shadows we can write text shadows. */
+            text-shadow: 2px 1px white;
+            text-shadow: 3px 2px 2px white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Implementing box shadows and text shadows. Look in the internal styling to know more. -->
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>This is Python Course</h2>
+            <p>I have started Python course which does not mean we will stop this course. We will continue this course to completion. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur explicabo non enim ratione esse natus nihil consequuntur nesciunt reprehenderit quae cupiditate labore repellendus minima accusantium facere nostrum omnis, molestiae nulla voluptates magni eaque? Assumenda.</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>This is HTML Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur explicabo non enim ratione esse natus nihil consequuntur nesciunt reprehenderit quae cupiditate labore repellendus minima accusantium facere nostrum omnis, molestiae nulla voluptates magni eaque? Assumenda.</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>Card 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur explicabo non enim ratione esse natus nihil consequuntur nesciunt reprehenderit quae cupiditate labore repellendus minima accusantium facere nostrum omnis, molestiae nulla voluptates magni eaque? Assumenda.</p>
+        </div>
+    </div>
+</body>
+
+</html>
