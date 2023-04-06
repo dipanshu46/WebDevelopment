@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Psuedo Selectors</title>
+
+    <!-- External Styling for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <!-- Internal Styling -->
+    <style>
+        body {
+            /* Body Reset */
+            margin: 0px;
+            padding: 0px;
+            /* styling */
+            background-color: black;
+            color: white;
+        }
+        
+        /* before pseudo selector, to insert some css before a perticular tag */
+        /* Similarly we have an after pseudo selector to insert some css after a particular tag. */
+        header::before {
+            background: url('https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') no-repeat center center/cover;
+            /* content attribute required everytime when using before or after pseudo selectors */
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+
+        section {
+            height: 344px;
+            margin: 3px 23px;
+            padding: 0px 23px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: 'Bree Serif', serif;
+            margin-top: 0px;
+            font-size: 4rem;
+        }
+
+        p {
+            font-family: 'Bree Serif', serif;
+            text-align: center;
+        }
+
+        li {
+            list-style: none;
+            padding: 34px 23px;
+        }
+
+        .navigation {
+            margin: 0px;
+            font-family: 'Bree Serif', serif;
+            font-size: 20px;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Welcome to Coding World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum reiciendis animi tempore cumque impeditea facilis quis, ullam iusto sunt enim hic doloremque nobis rem esse necessitatibus beatae voluptate aliquid soluta? Laudantium perferendis laboriosam cupiditate.</p>
+    </section>
+</body>
+
+</html>
