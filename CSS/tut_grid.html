@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            /* Intializing container as a grid element */
+            display: grid;
+            /* To define columns use grid-template-columns: <width of column 1> <width of column 2> .... <width of column n> ; */
+            /* Following line will create a grid of 3 columns with the specified widths. */
+            grid-template-columns: 300px 100px 100px;
+            /* Following line will create a grid of 3 columns with first two columns of the specified width and the last column with the enitre available width */
+            grid-template-columns: 300px 100px auto;
+            /* Similarly the following line will create a grid of 3 columns with the first and the last columns of the specified width and the second column with the entire available width in between. */
+            grid-template-columns: 300px auto 100px;
+
+            /* We can also use a unit fr which is fraction. */
+            /* So the following line will divide the entire screen in 6 equal pasrts and assigns 1 part to the first column, 4 parts to the second column and 1 part to the third column */
+            grid-template-columns: 1fr 4fr 1fr;
+
+            /* To make multiple columns you can use repeat(no. of columns, width of each) method */
+            grid-template-columns: repeat(4, auto);
+            
+            grid-gap: 2rem;
+        }
+
+        /* Making our grid responsive */
+        
+        @media only screen and (max-width:200px){
+            .container{
+                grid-template-columns: repeat(1, auto);
+            }
+        }
+
+        @media only screen and (min-width:200px) and (max-width:400px) {
+            .container{
+                grid-template-columns: repeat(2, auto);
+            }
+        }
+        @media only screen and (min-width:400px) and (max-width:600px) {
+            .container{
+                grid-template-columns: repeat(4, auto);
+            }
+        }
+        @media only screen and (min-width:600px) and (max-width:800px) {
+            .container{
+                grid-template-columns: repeat(6, auto);
+            }
+        }
+        @media only screen and (min-width:800px){
+            .container{
+                grid-template-columns: repeat(10, auto);
+            }
+        }
+        .item{
+            /* height: 100px;
+            width: 100px; */
+            background-color: red;
+            padding: 15px 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Grid is display property that helps us to create layouts over the entire screen by default. -->
+    <div class="container">
+        <div class="item">This is Item-1</div>
+        <div class="item">This is Item-2</div>
+        <div class="item">This is Item-3</div>
+        <div class="item">This is Item-4</div>
+        <div class="item">This is Item-5</div>
+        <div class="item">This is Item-6</div>
+        <div class="item">This is Item-7</div>
+        <div class="item">This is Item-8</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-10</div>
+        <div class="item">This is Item-11</div>
+        <div class="item">This is Item-12</div>
+        <div class="item">This is Item-13</div>
+        <div class="item">This is Item-14</div>
+        <div class="item">This is Item-15</div>
+        <div class="item">This is Item-16</div>
+        <div class="item">This is Item-17</div>
+        <div class="item">This is Item-18</div>
+        <div class="item">This is Item-19</div>
+        <div class="item">This is Item-20</div>
+    </div>
+</body>
+</html>
