@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid with Media Queries</title>
+
+    <!-- Internal Styling -->
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        .bdr {
+            border: 2px solid black;
+            padding: 10px 23px;
+            background-color: wheat;
+        }
+
+        nav {
+            grid-area: navbar;
+            text-align: center;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+
+        @media only screen and (max-width:400px) {
+            body {
+                background-color: red;
+            }
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width:400px) and (max-width:600px) {
+            body {
+                background-color: blue;
+            }
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'footer footer footer footer';
+            }
+            aside{
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width:600px) and (max-width:800px) {
+            body {
+                background-color: yellow;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+        }
+
+        @media only screen and (min-width:800px) {
+            body {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+        <section class="bdr">
+            <h2>Learn CSS in Hindi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quaerat sit officiis quae repellat ipsa harum excepturi? Sed architecto, neque maiores dolorum, ut saepe ratione quae numquam ipsam, adipisci aut! Consequatur magni itaque quibusdam et reiciendis rem, aliquam quo incidunt vitae quisquam corrupti ut, consequuntur sint architecto iusto non natus autem. Sed non, minus, accusamus eveniet suscipit cumque ut et, nihil incidunt facilis laudantium quae quod fuga? Unde atque hic labore ullam in quo, totam veritatis dolores aut nostrum nam inventore ipsum rem cumque iusto pariatur iure officia laborum? Laudantium sunt cum inventore earum non illum eaque omnis, fugit doloremque corporis id eius dolor quae nam dicta ad nisi praesentium perferendis cumque atque expedita eveniet quidem consequuntur? In eius autem odit quidem!</p>
+        </section>
+        <aside class="bdr">
+            <h1>More about us</h1>
+        </aside>
+        <footer class="bdr"> Copyright Dipanshu 2023</footer>
+    </div>
+</body>
+
+</html>
