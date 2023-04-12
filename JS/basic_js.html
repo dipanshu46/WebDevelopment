@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Tutorials</title>
+
+    <!-- Including External JS -->
+    <script src="/JS/script.js"></script>
+    <!-- since the code is running in the Web_Development directory we need to write paths from here i.e. from main. If you are running directly basic_js.html while being in the JS/ directory you can remove /JS/ from the path as both the files are in the same directory and are siblings -->
+
+    <!-- Writing js inside our html -->
+    <script>
+        // JS code
+        console.log('Hello world from Internal JS from head')
+    </script>
+
 </head>
 <body>
     <div class="container">
@@ -20,7 +31,7 @@
     <script>
         // This statement logs to the console that is found in the browser
         // You can find all the errors regarding js in the developer console section
-        console.log('Hello world!')
+        console.log('Hello world! from Internal JS from body')
     </script>
 </body>
 </html>
