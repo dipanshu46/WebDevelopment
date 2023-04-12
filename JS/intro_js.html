@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <!-- Font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+
+    <!-- Internal Styling -->
+    <style>
+        .container {
+            padding: 10px 10px;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'box1 box2'
+                'box3 box4'
+                'box5 box5';
+        }
+
+        .head {
+            padding: 34px 23px;
+            background-color: rgb(2 5 103);
+            color: white;
+            font-family: 'DynaPuff', cursive;
+            font-size: 3rem;
+        }
+
+        .list {
+            background-color: rgba(180, 180, 180, 0.562);
+            height: 23vh;
+            width: 49vw;
+            font-size: 1.5rem;
+        }
+
+        #box1 {
+            grid-area: box1;
+        }
+
+        #box2 {
+            grid-area: box2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Introduction to JavaScript -->
+    <!-- Ill be using little css to improve looks ;) -->
+
+    <div class="container">
+        <div id="box1">
+            <h1 class="head">1) What is Java Script?</h1>
+            <section class="list">
+                <ul>
+                    <li>Java Script is a client side scripting language</li>
+                    <li>It is used to make webpages alive</li>
+                    <li>It is used to programmatically perform actions within the page.</li>
+                </ul>
+            </section>
+        </div>
+        <div id="box2">
+            <h1 class="head">2) What can JavaScript do?</h1>
+            <section class="list">
+                <ul>
+                    <li>Java Script can execute not only on the browser, but also on the server.</li>
+                    <li>We will use JavaScript as a client as well as server side language</li>
+                    <li>JavaScript has evolved greatly as a language and is now used to perform wide variety of tasks.
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div id="box3">
+            <h1 class="head">3) What can In-browser JavaScript do?</h1>
+            <section class="list">
+                <ul>
+                    <li>Add new html and change existing html from DOM</li>
+                    <li>React to events :
+                        <ul>
+                            <li>response from server</li>
+                            <li>key pressed</li>
+                            <li>mouse movement</li>
+                        </ul>
+                    </li>
+                    <li>Ajax requests</li>
+                    <li>Get & Set cookies & use local storage</li>
+                </ul>
+            </section>
+        </div>
+        <div id="box4">
+            <h1 class="head">4) What can't In-browser JavaScript do?</h1>
+            <section class="list">
+                <ul>
+                    <li>Read/Write to & from computer hard disk</li>
+                    <li>Cross website Ajax requests</li>
+                </ul>
+            </section>
+        </div>
+        <div id="box5">
+            <h1 class="head">5) What makees JavaScript unique?</h1>
+            <section class="list">
+                <ul>
+                    <li>HTML/CSS Support</li>
+                    <li>Simple API's for performing simple tasks</li>
+                    <li>Enabled by default in major modern browsers</li>
+                </ul>
+            </section>
+        </div>
+
+    </div>
+</body>
+
+</html>
