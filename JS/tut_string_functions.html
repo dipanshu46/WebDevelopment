@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | String Functions</title>
+</head>
+<body>
+    
+    <script>
+        var str = "This is a string";
+        console.log(str)
+
+        // First occurence of substring
+        var position = str.indexOf('is')
+        console.log(position)
+
+        // Last occurence of substring. NOTE: JS is a case sensitive language
+        position = str.lastIndexOf('is')
+        console.log(position)
+
+        // Substring from a string 
+        var substr = str.slice(1, 7)        // slices the string using indexes and can use negative indexes
+        console.log(substr)
+        var substr = str.substring(1, 7)    // slices using indexes but negative indexes are not allowed.
+        console.log(substr)
+        var substr = str.substr(1, 2)       //slice using the start index and the length required further.
+        console.log(substr)
+
+        // To replace a string
+        var replaced = str.replace('string', 'replaced string')
+        console.log(str)
+        console.log(replaced)
+
+        // To convert to uppercase or lowercase
+        console.log(str.toUpperCase())
+        console.log(str.toLowerCase())
+
+        // To concatenate two strings you can also use concat method
+        var newString = str.concat('New String')
+        console.log(newString)
+
+        // Trim function to remove a string from start and end of the sring
+        var strWithWhitespaces  = "     this conatins     whitespaces    "
+        console.log(strWithWhitespaces)
+        console.log(strWithWhitespaces.trim())
+
+        // To get the character at an index
+        var char2 = str.charAt(2)
+        console.log(char2)
+
+        // To get the character code of an index
+        var charCode2 = str.charCodeAt(2)
+        console.log(charCode2)
+
+        // Another slicing technique
+        console.log(str[2])
+
+    </script>
+</body>
+</html>
