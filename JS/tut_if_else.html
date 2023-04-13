@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Scope and conditionals</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+
+    <script>
+        var string1 = "This is a string"
+        var string1 = "This is a string2"
+        console.log(string1)
+        // var has a global level scope
+        // let has a block level scope
+        // We will be using let from now on
+        let a = "u";
+        // let a = "u6";       // declaring the same variable using let inside the same scope is prohibited
+        {
+            let a = 'u6';       // declaring a variable which was already declared in a different scope is allowed as in this case. Here will be assigned and will be accessible only inside this block. Going out of this block we will have the old a.
+            console.log(a)
+        }
+        console.log(a)
+
+        const b = "This cannot be changed"
+        console.log(b)
+        // b = "why it cannot be changed i want to change it."  // since b is const it cannot be changed.
+        // console.log(b)
+
+        // Conditionals using if, else if and else
+        let age = 34
+        if (age>18){
+            // If the condition is met it will execute this block only
+            console.log("You can drink water")
+        }
+        else if(age==2){
+            // If the previous if condition wasn't met it will come to this else if and check its condition, if the condition is satisified it will execute this block
+            console.log("Age is 2")
+        }
+        else if(age==5){
+            // Similarly this block will execute if the condition is met
+            console.log("Age is 5")
+        }
+        else{
+            // When all other conditions will fail to satisfy the conditions this block will be executed
+            console.log("You can drink cold drink")
+        }
+
+        // Switch expression
+        // In switch case an expressions output is matched with the cases mentioned inside the block, if a certain case matches the expression, the following block of code is executed and since a break is encountered it exits the switch block. If the cases fail to match the expression the default block is executed. 
+        const cups = 45;
+        switch (cups) {
+            case 4:
+                console.log("The value of cups is 4")
+                break;
+            case 41:
+                console.log("The value of cups is 41")
+                break;
+            case 42:
+                console.log("The value of cups is 42")
+                break;
+            case 43:
+                console.log("The value of cups is 43")
+                break;
+        
+            default:
+                console.log("The value of cups is none of, 4, 41, 42, 43")
+                break;
+        }
+
+    </script>
+</body>
+</html>
