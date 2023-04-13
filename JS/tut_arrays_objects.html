@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Arrays and Objects</title>
+</head>
+<body>
+    <div class="container">
+        simple si html
+    </div>
+    <script>
+        // There basically two types of datatypes
+        // Primitive and Objects
+        
+        // Primitive Datatypes:
+        let myVar = 34;
+        let myVar2 = "string"
+        let myVar3 = true
+        let myVar4 = null           // null is a special datatype which indicates a null value
+        let myVar5 = undefined      // undefined is a special datatype which is by for everything that has nothing or returns nothing
+        
+        // Objects - Everything except primitive datatypes
+        
+        // Key value pair Object, also known as Dictionary in python.
+        let employee = {
+            name : "Dipanshu",
+            salary : 10,
+            role : "Web-Developer",
+            "work experience" : 8       // To create a key with spaces you need to write it as a string
+
+        }
+        console.log(employee)
+        // to access the properties of object
+        console.log(employee.name)
+        console.log(employee['role'])
+        // console.log(employee.'work experience')      // This notation will not work for keys with spaces
+        console.log(employee['work experience'])        // This is the correct method to do so
+        
+        // Array is an object in js. They can contain data of any type just like list in python
+        let names = [1,2,4,"Dipanshu", undefined]
+        names = new Array(41,2,4,"Dipanshu", undefined)      // also a method to create array using object calling of Array object
+        console.log(names)
+        console.log(names[1])
+        // To find the length of an array
+        console.log(names.length)
+        // To sort an array
+        names = names.sort()
+        console.log(names)
+        // To append an item in the array
+        names.push("This is pushed")
+        console.log(names)
+        // To create an empty array of n elements 
+        let empty = new Array(23)
+        console.log(empty)
+        console.log(empty[10])
+    </script>
+</body>
+</html>
