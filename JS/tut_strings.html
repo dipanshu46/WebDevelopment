@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Strings and String Methods</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellendus tempore fugit enim, consequuntur itaque unde commodi delectus voluptatibus deserunt deleniti. Placeat rem at quasi laboriosam, libero odio perferendis distinctio incidunt quia? Commodi, totam.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // creating strings - use single or double quotes to create strings
+        var string = "this";
+        var string = 'this';
+        var name = 'Dipanshu'
+        var channel = 'iCoder'
+        var message = '- is a good boy'
+        // Concatenation
+        console.log(string + name + message)
+
+        // template literal Use ${var_name}
+        var template = `${name} is a nice person and he has a channel called ${channel}`;
+        console.log(template)
+
+        // Length of a string use string.length
+        var len = name.length;
+        console.log(`Length of ${name} is ${len}`)
+
+        // Escape sequence characters - are special characters that perform some actions
+        console.log('Hello world!\nDipanshu\tand\band\\')
+
+        // Strings can also be created using String constructor (not recommended as a beginner)
+
+        // Strings we will be using to introduce html in our dom so it is important to have good command over string manipulation too which we'll see in the next tutorial.
+
+    </script>
+</body>
+</html>
