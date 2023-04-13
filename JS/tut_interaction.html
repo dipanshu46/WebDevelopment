@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Interaction - alert, confirm and prompt</title>
+</head>
+<body>
+    <div class="container">
+        This is a page.
+    </div>
+
+    <script>
+        // Alert in in-Browser Javascript
+        // Alert is modal that allows a website to communicate to user. When a modal is opened you need to close it first to continue using the website screen
+        alert("This is a message")      // does not returns anything
+
+        // Prompt in JS
+        // prompt(display message, default answer) - it returns the value entered by the user else default
+        let name = prompt("What is your name?", "Guest")
+        console.log(name)
+
+        // Confirm in JS
+        // confirm(message) - it returns a boolean value depending on the selection
+        let deletePost = confirm("Do you really want to delete this post?")
+        // console.log(deletePost)
+        if (deletePost){
+            // Code to delete the post 
+            alert("Your post has been deleted successfully")
+        }
+        else{
+            // Code to cancel deletion of the post 
+            alert("Your post has not been deleted")
+        }
+
+
+
+    </script>
+</body>
+</html>
