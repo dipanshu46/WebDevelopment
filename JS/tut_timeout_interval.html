@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | setInterval and setTimeout</title>
+
+    <style>
+        #btn{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        This is a container. <br>
+        Remember to open console to look for the results :)
+
+        <span id="time"></span>
+    </div>
+
+    <button id="btn" onclick="stopGreet()">Stop Greeting</button>
+
+    <script>
+        console.log('This is setInterval and setTimeout tutorial')
+
+        // setTimeout --> Allows us to run the function once after the interval of time
+        // clearTimeout --> Allows us to cancel the setTimeout call if needed
+
+        function greet(name){
+            console.log(`Hello Good Morning ${name}`)
+        }
+
+        // Syntax: setTimeout(function, time, function_argument1, function_argument2 .... ,function_argumentn)
+        setTimeout(greet, 3000, "Friend");
+        // Note: write only the function name, do not call it using parenthesis
+
+        // When you want to cancel your setTimeout call due to any reason, we use clearTimeout() to do so.
+        // setTimeout returns an id that can be used in clearTimeout to cancel the timer
+        timeOut = setTimeout(greet, 5000, "New friend");
+        console.log(timeOut)
+        clearTimeout(timeOut)
+        
+        // setInterval --> Allows us to run a function repeatedly after an interval of time.
+        // clearInterval --> Allows us to stop the setInterval call
+        IntervalID = setInterval(greet, 1000, "Dipanshu")
+        
+        function stopGreet(){
+            clearInterval(IntervalID)
+        }
+
+        function displayTime(){
+            time = new Date()
+            console.log(time)
+            document.getElementById('time').innerHTML = time;
+        }
+    </script>
+</body>
+</html>
