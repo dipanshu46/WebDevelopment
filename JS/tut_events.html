@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Events</title>
+    <style>
+        #btn {
+            padding: 10px 14px;
+            background-color: red;
+            color: white;
+            border: 2px solid black;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: font-size 0.5s ;
+        }
+
+        #btn:active{
+            background-color: rgb(163, 31, 31);
+        }
+
+        #btn:hover{
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Events are some activites that user can perform to interact with website -->
+
+    <!-- Browser Events :-
+    click
+    contextmenu
+    mouseover/mouseout
+    mouseup/mousedown
+    mousemove
+    submit
+    focus
+    DOMcontentloaded
+    transitionend -->
+    
+
+    <div class="container">
+        <h1>
+            This is my heading.
+        </h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id repellat aliquam, voluptatum impedit est rem
+            rerum eius? Officia blanditiis atque consequuntur voluptatibus quas tempore, esse veniam voluptatem aliquam
+            debitis odio a maiores est nobis quisquam consequatur laudantium. Incidunt tempora accusantium nesciunt
+            repellat dignissimos natus aspernatur, facilis distinctio at repellendus amet eligendi accusamus molestias
+            soluta laudantium tempore numquam dolores corrupti, voluptates alias reprehenderit asperiores quas commodi
+            consequatur. Aliquam voluptatem aspernatur, tempore mollitia sit libero! Rerum, ducimus. Repudiandae
+            dignissimos odio repellendus, culpa aliquid eum atque neque blanditiis qui consectetur consequuntur,
+            suscipit minus, quidem est harum itaque maiores. Repudiandae necessitatibus suscipit ullam pariatur minus,
+            repellendus corporis repellat. Explicabo, autem, non commodi consequuntur dolorem nobis vitae quod minus
+            fugit voluptatem tempore magni, aliquid iusto temporibus nihil? Nostrum, animi. Voluptas praesentium cumque
+            accusantium, qui minus harum inventore pariatur distinctio minima. Dicta praesentium perspiciatis soluta.
+            Tempora atque deserunt sint labore explicabo, ut alias fuga! Recusandae deleniti, animi, ea dolor quo
+            accusamus fugiat id veniam a asperiores error, doloribus illum laborum consectetur magni sint at? Ut facere
+            autem optio, temporibus nesciunt ipsum laudantium? At ducimus sequi, a accusantium saepe ut qui quaerat
+            similique tenetur optio porro aspernatur rerum itaque adipisci quas, harum atque sit nam ipsam corporis
+            quasi. Ea itaque a deleniti veritatis nihil inventore ipsam hic dicta sint, aut sed quibusdam fuga quaerat
+            suscipit placeat debitis similique eligendi distinctio. Dolor velit cumque labore, necessitatibus excepturi
+            iusto perspiciatis aliquid voluptate!</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Hide</button>
+
+
+    <script>
+        // First way to listen to event is to write onevent attribte inside the html element and assign the function to it as done on button.
+        function toggleHide(){
+            let button = document.getElementById('btn')
+            let para = document.getElementById('para')
+            if (para.style.display != 'none'){
+                para.style.display = 'none';
+                button.innerHTML = 'Show';
+            }
+            else{
+                para.style.display = 'block';
+                button.innerHTML = 'Hide';
+            }
+
+        }
+
+        // Second way to listen for event is to add event listener
+        // let para = document.getElementById('para')
+        // Note: We can directly use id to refer an element without assigning it to a variable because when id is created a global variable is linked to the id with the same name as the id. If you want to use a simpler name for an element then you can create a variable with a name and use document.getElementById() to get its id and access it.
+        console.log(para)       // Note: This para is the global para that is automatically created for its id and it is not the one defined in the above function as their scopes are different.
+        para.addEventListener('mouseover', function run(){
+            console.log('Mouse is over the para')
+        })
+        para.addEventListener('mouseout', function run(){
+            console.log('Mouse went outside the para')
+        })
+    </script>
+</body>
+
+</html>
