@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Date & Time</title>
+    <style>
+        div {
+            margin-top: 20px;
+            padding: 0px;
+        }
+
+        span {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 4px 10px;
+            border: 4px solid red;
+            background-color: black;
+            color: greenyellow;
+            border-radius: 8px;
+            font-size: 34px;
+            width: 124px;
+        }
+
+        .container {
+            margin: 10px;
+            height: 25vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        This is a container<br>Current Time <br>
+        <div><span id="time"></span></div>
+    </div>
+
+    <script>
+        console.log("This is date and time tutorial")
+        let now = new Date();
+        console.log(now)
+
+        start = Date.now()    // This is a time stamp in milliseconds which we can use to find the run time of a code
+        console.log(`Start: ${start}`)
+
+        let dt = new Date(0);       // This will return the initial reference date
+        dt = new Date(1000);        // This will return the date and time which is 1 second after the initial reference.
+        console.log(dt)
+
+        let newDate = new Date("2029-09-04")    // This will return the date time of the mentioned date in the string.
+        console.log(newDate)
+
+        // newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds)
+        // Note: Enter month number by subtracting 1 from it since the index starts from 0 so Jan corresponds to 0.
+        newDate = new Date(3020, 8, 4, 1, 10, 0, 0)
+        console.log(`My Birthday in 3020 will be on ${newDate}`)
+
+        // To access date month year from this format we can use the following methods
+
+        let year = newDate.getFullYear()
+        console.log(year)
+
+        let month = newDate.getMonth()
+        console.log(month + 1)
+
+        let date = newDate.getDate()
+        console.log(date)
+
+        let hours = newDate.getHours()
+        console.log(hours)
+
+        // Similarly we have minutes, seconds, milliseconds and day
+
+        newDate.setDate(39)
+        console.log(newDate)
+
+        // Similarly we have setHours, setMonth, setMinutes etc.
+
+
+        let end = Date.now()
+        console.log(`End: ${end}`)
+
+        console.log(`Runtime: ${end - start} ms`)
+
+        // Creating Real Time clock display on our webpage.
+
+        function updateTime() {
+            let time = document.getElementById('time')
+            let date = new Date()
+            let value = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+            time.innerHTML = value
+        }
+
+        setInterval(updateTime, 1000)
+    </script>
+</body>
+
+</html>
