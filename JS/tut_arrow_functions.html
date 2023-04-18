@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Arrow functions</title>
+</head>
+<body>
+    <div class="container">
+        This is arrow function tutorial
+    </div>
+
+    <script>
+        // General method of writing a function
+        function greet(){
+            console.log('Good Morning')
+        }
+        greet()
+
+        // Writing function using arrow function
+        let greet = () => {
+            console.log('Hello from Arrow function')
+        }
+        greet()
+        
+        greet = () => console.log("Hello from smaller Arrow function")
+        greet()
+
+        // So arrow function is basically a shortcut to write functions just like lambda functions in python, iykyk :)
+
+        // Another example of Arrow function
+        let sum = (a,b) => {
+            return a+b;
+        }
+        sum(5,3)
+
+        // This function can also be written in a more simpler way like this 
+        sum = (a,b) => a+b;
+        sum(5,5)
+
+        // Another example of Arrow function
+        // suppose we want to write a function that returns half of the given value, we can write it like this
+        let half = a => a/2;
+        half(45)
+        // Note we can remove brackets if there is only one parameter to be passed and it works totally fine.
+
+        // Arrow functions can be used inside the set function as you can see in the template provided by the emmet in vs code.
+        setTimeout(()=>{
+            console.log("Hello after a timeout")
+        }, 5000)
+
+        // Important point -> Lexical this
+        let obj1 = {
+            greeting : "Good Morning",
+            names : ['Dipanshu', 'Harry', 'Rohan', 'Ninad'],
+            // Creating a function inside an object which will use an arrow function
+            speak(){
+                this.names.forEach((student)=>{
+                    // Generally this marks the object or the function inside whose block this is used, but when we use arrow function, it does not have a this binding to itself, so, this.greeting won't give undefined but will look for greetings in the parent block that obj1 block.
+                    console.log(`${this.greeting} Kukdoo koo ${student}`)
+                })
+            }
+        }
+
+        obj1.speak()
+
+    </script>
+</body>
+</html>
