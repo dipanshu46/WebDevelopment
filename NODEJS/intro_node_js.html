@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS | Introduction</title>
+
+    <!-- Font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+
+    <!-- Internal Styling -->
+    <style>
+        .container {
+            padding: 10px;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'box1 box2' 
+                'box3 box4';
+        }
+
+        .head {
+            padding: 34px 23px;
+            background-color: rgb(2 5 103);
+            color: white;
+            font-family: 'DynaPuff', cursive;
+            font-size: 3rem;
+            margin-top: 0px;
+            margin-bottom: 12px;
+        }
+
+        .list {
+            padding: 10px 0px;
+            background-color: rgba(180, 180, 180, 0.562);
+            height: max-content;
+            /* width: 98vw; */
+            font-size: 1.5rem;
+        }
+
+        .box {
+            width: 48vw;
+        }
+
+        .note {
+            color: red;
+        }
+
+        #box1 {
+            grid-area: box1;
+        }
+
+        #box2 {
+            grid-area: box2;
+        }
+
+        #box3 {
+            grid-area: box3;
+        }
+        #box4 {
+            grid-area: box4;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Content Starts -->
+    <div class="container">
+        <div id="box1" class="box">
+            <h1 class="head">What is NodeJS ?</h1>
+            <section class="list">
+                <ul id="list1">
+                </ul>
+            </section>
+        </div>
+        <div id="box2" class="box">
+            <h1 class="head">Why use NodeJS ?</h1>
+            <section class="list">
+                <ul id="list2">
+                </ul>
+            </section>
+        </div>
+
+        <div id="box3">
+            <h1 class="head">How to download NodeJS ?</h1>
+            <section class="list">
+                For Windows,
+                <ol id="list3"></ol>
+                For Ubuntu,
+                <ol id="list4"></ol>
+            </section>
+        </div>
+
+        <div id="box4">
+            <h1 class="head">Verifying working of node js</h1>
+            <section class="list">
+                <ul id="list5">
+                </ul>
+            </section>
+        </div>
+    </div>
+    <!-- Page Content Ends -->
+
+    <!-- Internal JavaScript -->
+    <script>
+        // Accessing list from the dom
+        let list = document.getElementById('list1')
+
+        // Creating a function to dynamically add items to a list
+        function addItemToList(list, content) {
+            console.log(list)
+            for (element of content) {
+                list.innerHTML += "<li>" + element + "</li>"
+                console.log(`Added item to the list --> ${element}`)
+            }
+            
+        }
+
+        // Data to be added as list items
+        content_1 = [
+            "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine",
+            "Node.js is designed to build scalable network applications",
+            "Node.js can be downloaded from the official Node.js web site : https://nodejs.org",
+            "Node.js is free and open source server environment",
+            "Node.js allows us to run JavaScript on the server",
+            "Node.js can run on multiple OS"
+        ]
+
+        content_2 = [
+            "You can use JavaScript in the entire stack",
+            "Many famous companies use node.js as their backend",
+            "Node.JS comes with a lot of built in modules",
+            "Node.JS is fast"
+        ]
+
+        content_3 = [
+            "Go to web browser and type --> NodeJS install",
+            "Click on the link of your OS and it will install the latest version of Node Js."
+        ]
+
+        content_4 = [
+            "Go to web browser and type --> NodeJS install",
+            "Click on other downloads or scroll down and click on the green link --> Installing Node.js via package manager",
+            "Click on the green link which is your operating system (in this case --> Debian or Ubuntu)",
+            "Click on Node.js binary distributions",
+            "Scroll down and find Installation instructions and copy paste the lines and run them in your terminal line by line. <br><section class='note'>Note: Run '$ sudo apt install curl' before running the commands to make sure you have curl installed in your system.</section>"
+        ]
+
+        content_5 = [
+            "Open terminal VS Code terminal (or terminal for ubuntu)",
+            "Type '$ node' and hit enter",
+            "Your node version should display and node scripting area '>' should display<br>Congratulations on your successful installation of node js."
+
+        ]
+
+        // iterating over the content list and adding each element
+        list = document.getElementById('list1')
+        addItemToList(list, content_1)
+
+        list = document.getElementById('list2')
+        addItemToList(list, content_2)
+
+        list = document.getElementById('list3')
+        addItemToList(list, content_3)
+        list = document.getElementById('list4')
+        addItemToList(list, content_4)
+
+        list = document.getElementById('list5')
+        addItemToList(list, content_5)
+    </script>
+</body>
+
+</html>
