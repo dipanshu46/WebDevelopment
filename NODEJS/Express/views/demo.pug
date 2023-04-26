@@ -1,0 +1,10 @@
+//- In our app we have send strings but we would like to send html pages so that our website becomes like a website. But to do this it is very tidy to give each file as a string. Instead we can use some template engines to do this work for us. Express allows us to use these template engines.
+//- Template engines - Template engines take in tokenized strings and produce rendered strings with values in place of tokens as output.
+//- We'll ve using pug 
+
+html 
+    head 
+        title= title    
+    body 
+        h1= message 
+//- NOTE: there should be no space in between the variable name and '='
