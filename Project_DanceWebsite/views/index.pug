@@ -1,0 +1,36 @@
+doctype html
+html 
+    head 
+        title Dipanshu's Dance Academy
+        style
+            include ../static/style.css
+    body 
+        nav#navbar.top.firstClass.secondClass 
+            ul
+                li #[a(href="/") Home]
+                li #[a(href="/") About]
+                li #[a(href="/") Services]
+                li #[a(href="/") Class Info]
+                li #[a(href="/") Contact Us]
+
+        section#introSection
+            div Welcome to Dipanshu's Dance Academy
+            div.small Eat Dance Sleep Repeat 
+        
+        section#missionSection 
+            h2 Our Mission
+            .card
+                p This is a para 
+            .card 
+                p This is a para
+            .card 
+                p This is a para
+
+        section#sponserSection 
+            h2  Our Sponsers
+
+        footer#footer
+            | our footer here
+
+        script 
+            include ../static/index.js  
