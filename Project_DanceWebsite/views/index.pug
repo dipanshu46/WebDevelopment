@@ -7,6 +7,10 @@ html
     body 
         nav#navbar.top.firstClass.secondClass 
             ul
+                a(href="/")     
+                    #logo
+                        img(src="/static/img/logo.png")
+                        | DDA
                 li #[a(href="/") Home]
                 li #[a(href="/") About]
                 li #[a(href="/") Services]
@@ -20,17 +24,37 @@ html
         section#missionSection 
             h2 Our Mission
             .card
-                p This is a para 
+                h3 Dance Perfection 
+                .card-box
+                    .card-img 
+                        img(src="/static/img/1.png")
+                    .card-content 
+                        p This is the best dance academy of the universe
             .card 
-                p This is a para
+                h3 Dance the way you like 
+                .card-box
+                    .card-img 
+                        img(src="/static/img/2.png")
+                    .card-content 
+                        p This is the best dance academy of the universe
             .card 
-                p This is a para
+                h3 Expert Teaching
+                .card-box
+                    .card-img 
+                        img(src="/static/img/3.png")
+                    .card-content 
+                        p This is the best dance academy of the universe
 
-        section#sponserSection 
-            h2  Our Sponsers
+        section#sponsorSection 
+            h2  Our Sponsors
+            #sponsors 
+                img(src="/static/img/sponsor_logo_apple.png", alt="Apple Sponsor Image" class="spImage")
+                img(src="/static/img/sponsor_logo_hp.png", alt="HP Sponsor Image" class="spImage")
+                img(src="/static/img/sponsor_logo_skype.png", alt="Skype Sponsor Image" class="spImage")
+                img(src="/static/img/sponsor_logo_microsoft.png", alt="Microsoft Sponsor Image" class="spImage")
 
         footer#footer
-            | our footer here
+            | Copyright &#169; 2023 DDA.com | All rights reserved 
 
         script 
             include ../static/index.js  
