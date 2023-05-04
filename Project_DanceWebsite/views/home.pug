@@ -1,0 +1,47 @@
+//- home.pug
+extends base.pug
+//- extends brings the file in use and replaces the blocks in the extended file with the blocks mentioned in this file.
+
+block scripts 
+    scripts(src="/static/index.js")
+
+block style 
+    style 
+        include ../static/style.css
+
+block content
+    section#introSection
+        div Welcome to Dipanshu's Dance Academy
+        div.small Eat Dance Sleep Repeat 
+        
+    section#missionSection 
+        h2 Our Mission
+        .card
+            h3 Dance Perfection 
+            .card-box
+                .card-img 
+                    img(src="/static/img/1.png")
+                .card-content 
+                    p This is the best dance academy of the universe
+        .card 
+            h3 Dance the way you like 
+            .card-box
+                .card-img 
+                    img(src="/static/img/2.png")
+                .card-content 
+                    p This is the best dance academy of the universe
+        .card 
+            h3 Expert Teaching
+            .card-box
+                .card-img 
+                    img(src="/static/img/3.png")
+                .card-content 
+                    p This is the best dance academy of the universe
+
+    section#sponsorSection 
+        h2  Our Sponsors
+        #sponsors 
+            img(src="/static/img/sponsor_logo_apple.png", alt="Apple Sponsor Image" class="spImage")
+            img(src="/static/img/sponsor_logo_hp.png", alt="HP Sponsor Image" class="spImage")
+            img(src="/static/img/sponsor_logo_skype.png", alt="Skype Sponsor Image" class="spImage")
+            img(src="/static/img/sponsor_logo_microsoft.png", alt="Microsoft Sponsor Image" class="spImage")

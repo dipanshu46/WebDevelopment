@@ -1,0 +1,26 @@
+//- base.pug 
+//- This is a template which can be extended in other pages to use this template.
+doctype html
+html 
+    head 
+        title Dipanshu's Dance Academy 
+        block scripts 
+        block style 
+    body 
+        nav#navbar.top.firstClass.secondClass 
+            ul
+                a(href="/")     
+                    #logo
+                        img(src="/static/img/logo.png")
+                        | DDA
+                li #[a(href="/") Home]
+                li #[a(href="/") About]
+                li #[a(href="/") Services]
+                li #[a(href="/") Class Info]
+                li #[a(href="/contact") Contact Us]
+
+        block content 
+
+        footer#footer
+            | Copyright &#169; 2023 DDA.com | All rights reserved 
+        
