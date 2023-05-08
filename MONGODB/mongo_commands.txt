@@ -1,0 +1,54 @@
+Commands for mongo :-
+
+1) To show all the databases
+> show dbs
+
+2) To show the current database
+> db
+
+3) To switch or create a database
+> use DatabaseName
+
+4) To see the names of the collections inside the database
+> show collections
+
+5) Inserting data in mongodb
+> db.items.insetOne({name:"Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98})
+> db.items.insetMany([{name:"Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98}, {name: "MotoS", price: 29000, rating: 3.5, qty: 133, sold: 598}, {name: "Realme 80s", price: 129000, rating: 2.5, qty: 633, sold: 98, is5G: "True"}])
+
+6) To get all the content in the collection of the database
+> db.items.find()
+
+- To get documents with a particular filter, use a filter object inside the parenthesis of find.
+> db.items.find({rating: 3.5}) 
+
+- To get document with rating greater than or equal to 3.5
+> db.items.find({rating: {$gte: 3.5}})
+$gte - for greater than equal to
+$gt - for greater than
+$lte - for less than equal to
+$lt - for less than
+
+- To get document with multiple filters just write the filter objects seperatd with a comma.
+> db.items.find({rating: {$gt: 3.5}}, {price: {$gt: 4000}})
+NOTE: these multiple filter object are checked in and fashion, i.e. rating greater than 3.5 and price greater than 4000
+
+- To get document with multiple filters in the or fashion, i.e. rating greater than 3.5 or price greater than 4000
+> db.items.find({$or[{rating: {$gt: 3.5}}, {price: {$gt: 4000}}]})
+
+- To get document with only a single filter object in the result
+> db.items.find({rating: {$gt:3.5}}, {rating: 1})
+
+
+########################################################################################################################
+
+Debugging in Linux sytem if mongo db doesn't start
+If sudo systemctl start mongod, does not starts the database and you receive an error as Active: failed, run the below commands.
+
+$ chown -R mongodb:mongodb /var/lib/mongodb
+
+next command, 
+
+$ chown mongodb:mongodb /tmp/mongodb-27017.sock
+
+After running these two commands your problem will be solved.
