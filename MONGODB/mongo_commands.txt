@@ -1,4 +1,6 @@
-Commands for mongo :-
+#######################################################################################################################
+    
+    COMMANDS FOR MONGO -
 
 1) To show all the databases
 > show dbs
@@ -13,8 +15,8 @@ Commands for mongo :-
 > show collections
 
 5) Inserting data in mongodb
-> db.items.insetOne({name:"Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98})
-> db.items.insetMany([{name:"Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98}, {name: "MotoS", price: 29000, rating: 3.5, qty: 133, sold: 598}, {name: "Realme 80s", price: 129000, rating: 2.5, qty: 633, sold: 98, is5G: "True"}])
+> db.items.insertOne({name:"Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98})
+> db.items.insertMany([{name:"Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98}, {name: "MotoS", price: 29000, rating: 3.5, qty: 133, sold: 598}, {name: "Realme 80s", price: 129000, rating: 2.5, qty: 633, sold: 98, is5G: "True"}])
 
 6) To get all the content in the collection of the database
 > db.items.find()
@@ -30,17 +32,29 @@ $lte - for less than equal to
 $lt - for less than
 
 - To get document with multiple filters just write the filter objects seperatd with a comma.
-> db.items.find({rating: {$gt: 3.5}}, {price: {$gt: 4000}})
-NOTE: these multiple filter object are checked in and fashion, i.e. rating greater than 3.5 and price greater than 4000
+> db.items.find({rating: {$gt: 3.5}, price: {$gt: 4000}})
+NOTE: these multiple filter object are checked in the and fashion, i.e. rating greater than 3.5 and price greater than 4000
 
 - To get document with multiple filters in the or fashion, i.e. rating greater than 3.5 or price greater than 4000
-> db.items.find({$or[{rating: {$gt: 3.5}}, {price: {$gt: 4000}}]})
+> db.items.find({$or:[{rating: {$gt: 3.5}}, {price: {$gt: 4000}}]})
 
-- To get document with only a single filter object in the result
+- To get document with particular properties in the result set that parameter to 1 in the second object 
 > db.items.find({rating: {$gt:3.5}}, {rating: 1})
+> db.items.find({rating: {$gt: 3.5}}, {rating:1, qty:1})
 
+- To update a document 
+> db.items.updateOne({name: "MotoS}, {$set: {price: 2}}) 
+> db.items.updateMany({name: "MotoS"}, {$set: {price:3, rating:1}})
 
-########################################################################################################################
+7) To delete data from the database
+> db.items.deleteOne({price : 22000})
+
+8) To come out of the mongo shell (for windows) or mongosh (for Linux based OS)  
+> .exit
+
+#######################################################################################################################
+            
+    EXTRAS - 
 
 Debugging in Linux sytem if mongo db doesn't start
 If sudo systemctl start mongod, does not starts the database and you receive an error as Active: failed, run the below commands.
