@@ -48,6 +48,7 @@ NOTE: these multiple filter object are checked in the and fashion, i.e. rating g
 
 7) To delete data from the database
 > db.items.deleteOne({price : 22000})
+> db.items.deleteMany({price : 22000})
 
 8) To come out of the mongo shell (for windows) or mongosh (for Linux based OS)  
 > .exit
