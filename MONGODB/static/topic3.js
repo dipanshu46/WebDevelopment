@@ -1,7 +1,7 @@
 // Script injected by topic3.pug
 let content = [
-    'For Windows,\n<ul id="windows"></ul>',
-    'For Linux based,\n<ul id="linux"></ul>'
+    'For Windows, <ul id="windows"></ul>',
+    'For Linux based, <ul id="linux"></ul>'
 ]
 
 let windows_link = '<a href="https://www.mongodb.com/try/download/community" target="_blank">Windows</a>';
@@ -14,7 +14,7 @@ let windows_content = [
     'Check for the version, your os and the package to be MSI and hit the download button.',
     'After the download is completed, run the installer click on next until it asks for Setup Type.',
     'Select the Complete option and uncheck the option Install MongoDB as a Service, because we want to run this service on server and not on our pc. Click on Next.',
-    'Next will be Install MongoDB Compass. It is the Graphical User Interface for MongoDB. You can install or skip this as per your choice. Click Next and hit Install.',
+    'Next will be Install MongoDB Compass. It is the Graphical User Interface for MongoDB.<br>(We will be learning about it in the tutorial and will be using it. You can install or skip this as per your choice, but is recommended to install for tutorials)<br>Click Next and hit Install.',
     'After installation, Go to local disk C: and create a folder "data" and inside create a folder "db".',
     'Go to the Program Files, MongoDB, then Server, then inside the version folder, and finally inside the bin, and now copy the current path.',
     'After copying, right click on this pc, go to properties, and select advanced system settings',

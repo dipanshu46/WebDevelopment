@@ -1,0 +1,30 @@
+###################################################################################################
+
+    COMPASS - 
+        Compass is a GUI for mongodb. After starting a mongod process, instead of connecting it through the shell using mongo in windows and mongosh in Linux based OS, we can connect to it using Compass.
+    
+    Installation, for windows has been completed while installing mongodb (recommended settings).
+    For Linux based OS, 
+        1) Follow the url : https://www.mongodb.com/try/download/shell
+        2) In tools on the left side click on the MongoDB Compass (GUI)
+        3) Scroll down a little you'll find version, Platform and Package.
+            Select the stable version (stable would be written in ())
+            Select your OS in Platform.
+            Select deb in Package (if not by default)
+        4) Click on Download.
+        5) Open terminal and cd to downloads where your .deb file for mongodb-compass is present.
+        6) Run command :$ sudo dpkg -i (filename.deb), and hit Enter.
+        Your mongodb-compass will be installed and you can use it through termial using command mongodb-compass or from your applications.
+
+    After opening mongodb-compass, you can connect to an existing mongod process.
+    mongodb://localhost:27017/ is the default port address of our mongod process.
+    Make sure the process is still running and then click on the connect button in mongodb compass.
+
+###################################################################################################
+
+    MONGOOSE - 
+        Mongoose is a library for nodejs using which we can connect to a mongod process just as we did using mongo shell and mongodb-compass.
+    
+    To install mongoose run the command :$ npm install mongoose
+    
+    To get more detailed info about mongoose and its usage, visit its documentation using this url : https://mongoosejs.com/docs/
