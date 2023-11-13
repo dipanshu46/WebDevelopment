@@ -1,6 +1,7 @@
 /* Importing font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Yeon+Sung&display=swap');
 
+/* Element Styling */
 * {
     margin: 0;
     padding: 0;
@@ -11,12 +12,22 @@ ul a {
     text-decoration: none;
 }
 
+/* Class Styling */
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+
 .card {
     display: inline-block;
     border: 2px solid black;
     border-radius: 5px;
-    width: 30%;
-    margin: 23px 30px;    
+    margin: 23px 30px;
     height: 210px;
     /* background-color: #fff6f6; */
     padding: 5px;
@@ -56,6 +67,13 @@ ul a {
 .spImage {
     height: 80%;
     margin: 20px;
+}
+
+
+/* Id styling */
+#viewpage {
+    width: auto;
+    height: 100vh;
 }
 
 #logo {
@@ -101,30 +119,9 @@ ul a {
     color: black;
 }
 
-#introSection {
-    padding-bottom: 40px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 425px;
-    background: center/cover no-repeat url("/static/img/dance-pic.jpeg");
-    background-color: red;
-    font-family: 'Varela Round', sans-serif;
-    font-size: 65px;
-}
-
 #introSection div.small {
     padding: 5px;
     font-size: 52px;
-}
-
-#missionSection {
-    display: block;
-    margin: auto;
-    height: 325px;
-    width: 100%;
 }
 
 #missionSection h2 {
@@ -135,6 +132,7 @@ ul a {
 }
 
 #sponsors {
+    display: flex;
     height: 190px;
     width: fit-content;
     margin: 27px auto;
@@ -142,8 +140,11 @@ ul a {
 }
 
 #sponsorSection {
-    height: 300px;
+    height: 20vh;
     background-color: #fbd6d6c7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #sponsorSection h2 {
@@ -162,4 +163,54 @@ ul a {
     font-family: 'Yeon Sung', cursive;
     height: 100px;
     background-color: black;
+}
+
+@media only screen and (max-width:639px) {
+    #introSection {
+        padding-bottom: 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        background: center/cover no-repeat url(/static/img/dance-pic.jpeg);
+        background-color: red;
+        font-family: 'Varela Round', sans-serif;
+        font-size: 65px;
+    }
+
+    #missionSection {
+        display: flex;
+        margin: auto;
+        height: 22vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width:640px) {
+    #introSection {
+        padding-bottom: 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        background: center/cover no-repeat url(/static/img/dance-pic.jpeg);
+        background-color: red;
+        font-family: 'Varela Round', sans-serif;
+        font-size: 65px;
+    }
+
+    #missionSection {
+        display: flex;
+        margin: auto;
+        height: 60vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
